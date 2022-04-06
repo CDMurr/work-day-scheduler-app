@@ -29,29 +29,52 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-      <div class="row">
-        
+      <div id="hour1" class="row time-block" >
+        <div class="col-md-1 hour">
+        <p>1:00</p>
+        <textarea class="col-md-10"></textarea>        
+        <!-- fix button icon floppy disk  -->
+        <button class="col-md-1 saveBtn"><i class="fas fa-floppy-disk"></i></button>        
+      </div>  
+    <div id="hour2" class="row time-block" >
+      <!-- add closing tag div, or remove if not needed  -->
+      <div class="col-md-1 hour">
+      <p>2:00</p>      
+      <textarea class="col-md-10"></textarea>      
+      <!-- fix button icon floppy disk  -->
+      <button class="col-md-1 saveBtn"><i class="fas fa-floppy-disk"></i></button>
+    </div>  
 
-          <!-- Timeblocks go here * message from provided code -->
-          <!-- use class names from provided css file  -->
-          <!-- the div above with class="row"   will need class name from css file time-block? -->
-          <!-- the row has a div nested inside that will have the column, with column length col-12 -->
-          <!-- inside of the div for col-12, nest into that the sizes to make of the 12 column spaces 
-          in the row -->
-          <!-- that will be the
-             (hour col-1),
-             (text area for task to be entered by user (col-10))
-             (save button col-1)
-             combined the 3 column make up the 12 column spaces in the row
-              -->
-          <span class="hour col-1">1:00</span>
-          <p class="task col-10" id="task"> <span>task to do</span></p>
-
-        
+  <div id="hour3" class="row time-block" >
+    <div class="col-md-1 hour">
+    <p>3:00</p>    
+    <textarea class="col-md-10"></textarea>    
+    <!-- fix button icon floppy disk  -->
+    <button class="col-md-1 saveBtn"><i class="fas fa-floppy-disk"></i></button>
+  </div>  
+                  
       </div>
-    </div>
+      <!-- Timeblocks go here * message from provided code -->
+      <!-- use class names from provided css file  -->
+      <!-- the div above with class="row"   will need class name from css file time-block? -->
+      <!-- the row has a div nested inside that will have the column, with column length col-12 -->
+      <!-- inside of the div for col-12, nest into that the sizes to make of the 12 column spaces 
+        in the row -->
+        <!-- that will be the
+          (hour col-1),
+          (text area for task to be entered by user (col-10))
+          (save button col-1)
+          combined the 3 column make up the 12 column spaces in the row
+        -->
+        
+      
+      <!-- closing div tag below is to the class="container" -->
+      </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+    <script 
+    src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <!-- add my script file after the provided scripts for jquery and moment .js  -->
     <script src="cody.js"></script>
