@@ -23,16 +23,16 @@
   </header>
 
 <!-- container for the all time slots, for each given row -->
-  <div class="container fluid">
+  <div class="container">
 
     <!-- hours for each row for a day 9-5  -->
     <div id="hour9" class="row time-block past">
       <div class="col-md-1 hour">
         <p>9:00</p>
       </div>
-      <textarea class="col-md-10"></textarea>
-      
-      <button class="btn saveBtn col-md-1"><i class="fa-solid fa-file-arrow-down"></i></button>
+      <textarea id="task" class="col-md-10"></textarea>
+      <!-- change save button icon  -->
+      <button id="save" class="btn saveBtn col-md-1"><i class="fa-solid fa-file-arrow-down"></i></button>
 
     </div>
     <div id="hour10" class="row time-block present">
@@ -110,22 +110,13 @@
   </div>
 
 
-  <!-- Timeblocks go here * message from provided code -->
+
   <!-- use class names from provided css file  -->
-  <!-- the div above with class="row"   will need class name from css file time-block? -->
-  <!-- the row has a div nested inside that will have the column, with column length col-12 -->
-  <!-- inside of the div for col-12, nest into that the sizes to make of the 12 column spaces 
-        in the row -->
-  <!-- that will be the
-          (hour col-1),
-          (text area for task to be entered by user (col-10))
-          (save button col-1)
-          combined the 3 column make up the 12 column spaces in the row
-        -->
 
 
-  <!-- closing div tag below is to the class="container" -->
-  </div>
+
+
+
 
 
 

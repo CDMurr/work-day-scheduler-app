@@ -2,7 +2,9 @@
 //  function for color coding the hours of the day based on current time,....
 //   ....to show past, present, and future by color. 
 
-
+var currentDay = function () {
+    moment().format('MMM Do')
+}
 $(document).ready(function () {
     $("#currentDay").text(moment().format("MMM Do YY")); 
 });
@@ -12,8 +14,23 @@ $(document).ready(function () {
 // save user input to local storage  , 
 // set onclick event for the save button for every hour
 // add eventlistner to save data to local storage, localStorage,setitem("myItem",value)
+var saveButton = document.querySelector("#save");
+var task = document.querySelector("#task")
 
-localStorage.setitem("hour1",)
+
+saveButton.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    var todo = {
+        task: task.value.trim()
+    }
+
+    localStorage.setItem("9:00", JSON.stringify(todo));
+});
+
+
+
+
 
 
 
