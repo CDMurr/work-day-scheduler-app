@@ -28,32 +28,40 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
+
+
+    <div class="container fluid">
+
       <div id="hour1" class="row time-block" >
         <div class="col-md-1 hour">
         <p>1:00</p>
+        </div>
         <textarea class="col-md-10"></textarea>        
         <!-- fix button icon floppy disk  -->
-        <button class="col-md-1 saveBtn"><i class="fas fa-floppy-disk"></i></button>        
+        <button class="btn saveBtn col-md-1"><i class="fa-solid fa-floppy-disk"></i></button>        
+        
       </div>  
-    <div id="hour2" class="row time-block" >
-      <!-- add closing tag div, or remove if not needed  -->
+      <div id="hour2" class="row time-block" >
+        <!-- add closing tag div, or remove if not needed  -->
+        <div class="col-md-1 hour">
+        <p>2:00</p>      
+        </div>
+        <textarea class="col-md-10"></textarea>      
+        <!-- fix button icon floppy disk  -->
+        <button class="col-md-1 saveBtn"><i class="fas fa-floppy-disk"></i></button>
+        
+      </div>  
+      <div id="hour3" class="row time-block" >
       <div class="col-md-1 hour">
-      <p>2:00</p>      
-      <textarea class="col-md-10"></textarea>      
+      <p>3:00</p>    
+      </div>
+      <textarea class="col-md-10"></textarea>    
       <!-- fix button icon floppy disk  -->
       <button class="col-md-1 saveBtn"><i class="fas fa-floppy-disk"></i></button>
-    </div>  
-
-  <div id="hour3" class="row time-block" >
-    <div class="col-md-1 hour">
-    <p>3:00</p>    
-    <textarea class="col-md-10"></textarea>    
-    <!-- fix button icon floppy disk  -->
-    <button class="col-md-1 saveBtn"><i class="fas fa-floppy-disk"></i></button>
+      </div>
   </div>  
                   
-      </div>
+      
       <!-- Timeblocks go here * message from provided code -->
       <!-- use class names from provided css file  -->
       <!-- the div above with class="row"   will need class name from css file time-block? -->
