@@ -1,13 +1,26 @@
-// function for getting the current day. 
-//  function for color coding the hours of the day based on current time,....
-//   ....to show past, present, and future by color. 
+// document will get the element by id, then its textContent will = moment()
+// will get the current day 
+document.getElementById("currentDay").textContent = moment().format("MMM Do YY");
 
-var currentDay = function () {
-    moment().format('MMM Do')
+
+// grab the current hour, save into a variable 
+// grab all the elements with time-block 
+// loop over those elemenets
+// comparing the element hour to the current hour 
+
+var currentHour = moment().hour()
+var timeBlocks = document.getElementsByClassName("time-block")
+for( var i = 0; i < timeBlocks.length; i++) {
+    var block = timeBlocks.item(i)
+    var blockHour = parseInt(block.id.replace("hour", ""))
+    console.log(blockHour);
+    if(blockHour < currentHour) {
+        block.className += " past "
+    }lse if 
 }
-$(document).ready(function () {
-    $("#currentDay").text(moment().format("MMM Do YY")); 
-});
+// else if statement for equal to current hour 
+
+
 
 
 
