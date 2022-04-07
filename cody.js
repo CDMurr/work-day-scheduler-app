@@ -14,9 +14,12 @@ for( var i = 0; i < timeBlocks.length; i++) {
     var block = timeBlocks.item(i)
     var blockHour = parseInt(block.id.replace("hour", ""))
     console.log(blockHour);
+    // if statement for if block hour is less than current hour then grey class= past
     if(blockHour < currentHour) {
         block.className += " past "
-    }lse if 
+    }
+    // else if for for equal to current hour goes after purple bracket
+    // then another else if for if  
 }
 // else if statement for equal to current hour 
 
