@@ -35,7 +35,7 @@ Technologies used: bootstrap, moment.js, javascript, html
 ![alt text](./Screen%20Shot%202022-04-07%20at%2011.57.32%20PM.png)
 
 github link:
-git@github.com:CDMurr/work-day-scheduler-app.git
+https://github.com/CDMurr/work-day-scheduler-app.git
 
 live url:
 https://cdmurr.github.io/work-day-scheduler-app/
