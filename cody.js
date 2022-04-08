@@ -8,12 +8,21 @@ document.getElementById("currentDay").textContent = moment().format("MMM Do YY")
 // loop over those elemenets
 // comparing the element hour to the current hour 
 
-var currentHour = moment().hour()
-var timeBlocks = document.getElementsByClassName("time-block")
-for( var i = 0; i < timeBlocks.length; i++) {
-    var block = timeBlocks.item(i)
-    var blockHour = parseInt(block.id.replace("hour", ""))
-    console.log(blockHour);
+const currentHour = moment().hour()
+const timeBlocks = document.getElementsByClassName("time-block")
+for( let i = 0; i < timeBlocks.length; i++) {
+    const block = timeBlocks.item(i)
+    const blockHour = parseInt(block.id.slice(4))
+    const task = block.querySelector("textarea")
+    const savedTask = localStorage.getItem(blockHour) // Get the task from localStorage using key
+    if (savedTask !== null){ // Check to see if task exists
+        task.value = savedTask // Assign the value of that saved tasks to the value of the textarea 
+    }
+    block.querySelector("button").addEventListener("click", function() {
+        console.log(block)
+        localStorage.setItem(blockHour, task.value)
+        console.log(blockHour, task.value)
+    })
     if(blockHour < currentHour) {
         block.className += " past "
     }else if(blockHour == currentHour) {
@@ -22,9 +31,9 @@ for( var i = 0; i < timeBlocks.length; i++) {
         block.className += " future "
     }
     // else if for foe 
-}
-// else if statement for equal to current hour 
-
+    // else if statement for equal to current hour 
+    
+};
 
 
 
@@ -32,19 +41,19 @@ for( var i = 0; i < timeBlocks.length; i++) {
 // save user input to local storage  , 
 // set onclick event for the save button for every hour
 // add eventlistner to save data to local storage, localStorage,setitem("myItem",value)
-var saveButton = document.querySelector("#save");
-var task = document.querySelector("#task")
+// var saveButton = document.querySelector("#save");
+// var task = document.querySelector("#task")
 
 
-saveButton.addEventListener("click", function (event) {
-    event.preventDefault();
+// saveButton.addEventListener("click", function (event) {
+//     event.preventDefault();
 
-    var todo = {
-        task: task.value.trim()
-    }
+//     var todo = {
+//         task: task.value.trim()
+//     }
 
-    localStorage.setItem("9:00", JSON.stringify(todo));
-});
+//     localStorage.setItem("9:00", JSON.stringify(todo));
+// });
 
 
 
