@@ -14,12 +14,14 @@ for( var i = 0; i < timeBlocks.length; i++) {
     var block = timeBlocks.item(i)
     var blockHour = parseInt(block.id.replace("hour", ""))
     console.log(blockHour);
-    // if statement for if block hour is less than current hour then grey class= past
     if(blockHour < currentHour) {
         block.className += " past "
+    }else if(blockHour == currentHour) {
+        block.className += " present "
+    }else if(blockHour > currentHour) {
+        block.className += " future "
     }
-    // else if for for equal to current hour goes after purple bracket
-    // then another else if for if  
+    // else if for foe 
 }
 // else if statement for equal to current hour 
 
@@ -47,6 +49,17 @@ saveButton.addEventListener("click", function (event) {
 
 
 
+// localStorage.setItem("10:00", JSON.stringify(todo));
+// localStorage.setItem("11:00", JSON.stringify(todo));
+// localStorage.setItem("12:00", JSON.stringify(todo));
+// localStorage.setItem("13:00", JSON.stringify(todo));
+// localStorage.setItem("14:00", JSON.stringify(todo));
+// localStorage.setItem("15:00", JSON.stringify(todo));
+// localStorage.setItem("16:00", JSON.stringify(todo));
+// localStorage.setItem("17:00", JSON.stringify(todo));
+// localStorage.setItem("9:00", JSON.stringify(todo));
+// localStorage.setItem("9:00", JSON.stringify(todo));
+// localStorage.setItem("9:00", JSON.stringify(todo));
 
 
 
